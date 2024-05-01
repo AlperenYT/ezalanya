@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZALANYA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>EZALANYA</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Ana Sayfa</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>EZALANYA'NIN BÜYÜK AÇILIŞINI BEKLEYİN</h2>
+            <p>Herkesten intikamınızı alın 😈</p>
+            <p id="countdown">Çok yakında sizlerle</p>
+            <a href="#" class="btn">Daha Fazla Bilgi</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 EZALANYA. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Açılış tarihini ayarlayın (26 Temmuz 2026)
+        var openingDate = new Date("July 26, 2024 00:00:00").getTime();
+
+        // Her saniyede bir geri sayımı güncelleyin
+        var countdownInterval = setInterval(function() {
+            // Şu anki zamanı alın
+            var now = new Date().getTime();
+
+            // Açılış tarihinden kalan zamanı hesaplayın
+            var distance = openingDate - now;
+
+            // Gün, saat, dakika ve saniyeleri hesaplayın
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Geri sayımı sayfaya yazdırın
+            document.getElementById("countdown").innerHTML = "Açılışa " + days + " gün " + hours + " saat " + minutes + " dakika " + seconds + " saniye kaldı";
+
+            // Eğer açılış tarihi geçmişse, geri sayımı durdurun ve mesajı güncelleyin
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "Açılış zamanı geldi!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
