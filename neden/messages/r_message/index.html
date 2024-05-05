@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZALANYA</title>
+    <link rel="stylesheet" href="r.css">
+</head>
+
+<body style="background-color: black;">
+
+    <video autoplay muted loop id="video-bg">
+        <source src="../../../data/video2.mp4" type="video/mp4">
+        <!-- Alternatif video formatları için gerekli kaynaklar buraya eklenebilir -->
+        Your browser does not support the video tag.
+    </video>
+
+    <audio autoplay loop>
+        <source src="../../../data/music.mp3" type="audio/mpeg">
+        Tarayıcınız ses öğesini desteklemiyor.
+    </audio>
+    
+
+    <div class="centered">
+        <h1 id="ezalanya-title">EZALANYA</h1>
+        <div id="scroll-text" class="scroll-text">- GİZLİ DOSYA ARŞİVİ -</div>
+        <p id="subtext">Dosya: R.txt</p>
+        <div id="console-text"></div>
+        <button onclick="location.href='../../../welcome.html';" class="button">Oyuna Gir 👽</button>
+        <p id="copyright">© 2024 - EZALANYA</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

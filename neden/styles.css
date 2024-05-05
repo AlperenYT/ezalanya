@@ -1,0 +1,101 @@
+body {
+    font-family: 'Product Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #24292e; /* Github'un karanlık temasının arka plan rengi */
+    color: #c8c8c8; /* Metin rengi */
+}
+
+header {
+    background-color: #161b22; /* Github'un karanlık temasının header rengi */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-card {
+    background-color: #161b22; /* Kart arka plan rengi */
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #161b22; /* Footer arka plan rengi */
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.primer-btn {
+    background-color: #1c242e; /* Github'un primer buton rengi */
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    width: 100%; /* Butonların eşit genişlikte olması için */
+    margin-top: 10px; /* Butonlar arasındaki boşluğu artırmak için */
+}
+
+.primer-btn:hover {
+    background-color: #161f33; /* Hover rengi */
+}
+
+.primer-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46, 77, 164, 0.3); /* Odak gölgesi */
+}
+
+.primer-btn:active {
+    background-color: #1c242e; /* Aktif durum rengi */
+}
+
+.category {
+    background-color: #1b2841; /* Kategori arka plan rengi */
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    display: inline-block;
+    max-width: 20%; /* Kartın genişliğinin yüzde 80'i kadar */
+    white-space: nowrap; /* Kategori uzunluğunu sınırlandırmak için */
+    overflow: hidden; /* Kategori uzunluğunu sınırlandırmak için */
+    text-overflow: ellipsis; /* Kategori uzunluğunu sınırlandırmak ve gerektiğinde üç nokta ile kısaltmak için */
+    margin-bottom: 10px; /* Kategori ile içerik arasındaki boşluk */
+}
