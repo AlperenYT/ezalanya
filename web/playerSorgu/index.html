@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oyuncu Sorgulama - EZALANYA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <video id="background-video" autoplay muted loop>
+        <source src="database/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+
+    <!-- Drawer Menü -->
+    <div class="drawer">
+        <h2>EZALANYA v2</h2>
+        <ul>
+            <li>
+                <span class="category">📌 ÖNEMLİ:</span>
+                <ul class="subcategory">
+                    <li>Kurallar</li>
+                    <li onclick="goToAnnouncements()">Duyurular</li>
+                    <li onclick="goToUpdates()">Güncellemeler</li>
+                </ul>
+            </li>
+            <li>
+                <span class="category">👽 OYUNCU SORGULAMA:</span>
+                <ul class="subcategory">
+                    <li>Klasik Sorgu (v1)</li>
+                    <li id="gelismis" onclick="goToGelismis()">Gelişmiş Sorgu (v2)</li>
+                </ul>
+            </li>
+            <li>
+                <span class="category">💸 DİSCORD:</span>
+                <ul class="subcategory">
+                    <li>Discord Hizmeti</li>
+                </ul>
+            </li>
+
+            <li>
+                <span class="category">🤑 LiveCivCiv:</span>
+                <ul class="subcategory">
+                    <li>Discord Sunucusu</li>
+                </ul>
+            </li>
+
+            <li>
+                <span class="category">🛠️ Diğer Araçlar:</span>
+                <ul class="subcategory">
+                    <li>İhbar 🟢</li>
+                    <li>Yemeksepeti 🟢</li>
+                    <li>SWS B0mb ⛔</li>
+                    <li>E-Okul ⛔</li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="content">
+        <img src="../images/logo.png" alt="EZALANYA Logo" class="logo">
+        <h1 id="sorguTitle">Oyuncu Sorgulama</h1>
+        <p id="versionText">Aktif | Gücünü v1'den Alıyor</p>
+        <div class="input-group">
+            <label id="usernameID" for="username">Kullanıcı Adı:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+            <label id="userIDlabel" for="userID">Kullanıcı ID:</label>
+            <input type="text" id="userID" name="userID" required>
+        </div>
+        <div class="button-group">
+            <button onclick="queryPlayer()">Sorgula</button>
+            <button onclick="showHelp()">Yardım</button>
+        </div>
+    </div>
+
+    <div id="errorMessage" class="error-message"></div>
+
+    <table id="playerTable">
+        <thead>
+            <tr>
+                <th>İsim</th>
+                <th>ID</th>
+                <th>Oluşturulma Tarihi</th>
+            </tr>
+        </thead>
+        <tbody id="playerTableBody">
+            <!-- Oyuncu bilgileri buraya eklenecek -->
+        </tbody>
+    </table>
+
+    <p id="copyright">© 2024 - EZALANYA</p>
+    
+    <script src="scripts.js"></script>
+
+</body>
+</html>

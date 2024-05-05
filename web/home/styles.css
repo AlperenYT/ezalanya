@@ -1,0 +1,169 @@
+/* Genel stiller */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #585858;
+    font-family: 'Product Sans', sans-serif; /* Product Sans fontunu uygula */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #0a0a0a;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+@keyframes changeColor {
+    0% { color: rgb(255, 0, 0); } /* Kırmızı RGB renk */
+    25% { color: rgb(0, 255, 0); } /* Yeşil RGB renk */
+    50% { color: rgb(0, 0, 255); } /* Mavi RGB renk */
+    75% { color: rgb(255, 255, 0); } /* Sarı RGB renk */
+    100% { color: rgb(255, 0, 255); } /* Pembe RGB renk */
+}
+
+#discordWidget {
+    padding: 20px;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Drawer menü stilleri */
+.drawer h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: changeColor 15s infinite alternate;
+}
+
+#gelismis {
+    animation: changeColor 2s infinite alternate;
+}
+
+.drawer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.drawer .category {
+    color: #fff;
+    font-weight: bold;
+}
+
+.drawer .subcategory {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+.drawer .subcategory li {
+    margin-bottom: 10px;
+    color: #bbb;
+}
+
+/* Duyurular bölümü stilleri */
+.announcements {
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.announcements h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+/* Duyurular tablosu stilleri */
+.announcement-table {
+    margin-bottom: 20px;
+    /* Duyurular tablosu stilleri buraya gelecek */
+    margin-top: 50px;
+}
+
+/* Buton stilleri */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Buton stilleri */
+.buttons {
+    display: flex;
+    justify-content: center; /* Butonları yatayda ortala */
+    gap: 10px; /* Butonlar arası boşluk */
+    margin-top: 20px; /* Butonların üstündeki boşluk */
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Küçük ekranlar için stiller */
+@media (max-width: 768px) {
+    .drawer {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 200px;
+    }
+}
+
+.announcements {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.announcements h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Duyurular tablosu stilleri */
+.announcement-table {
+    width: 80%; /* Tablo genişliğini ayarla */
+    margin: 0 auto; /* Tabloyu yatayda ortala */
+    color: #fff;
+}
+
+#announcementTable {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+#announcementTable th, #announcementTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#announcementTable th {
+    background-color: black;
+}

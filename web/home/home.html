@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZALANYA - Ana Sayfa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Drawer Menü -->
+    <div class="drawer">
+        <h2>EZALANYA v2</h2>
+        <ul>
+            <li>
+                <span class="category">📌 ÖNEMLİ:</span>
+                <ul class="subcategory">
+                    <li>Kurallar</li>
+                    <li onclick="goToAnnouncements()">Duyurular</li>
+                    <li onclick="goToUpdates()">Güncellemeler</li>
+                </ul>
+            </li>
+            <li>
+                <span class="category">👽 OYUNCU SORGULAMA:</span>
+                <ul class="subcategory">
+                    <li onclick="goToSorgu()">Klasik Sorgu (v1)</li>
+                    <li id="gelismis" onclick="goToGelismis()">Gelişmiş Sorgu (v2)</li>
+                </ul>
+            </li>
+            <li>
+                <span class="category">💸 DİSCORD:</span>
+                <ul class="subcategory">
+                    <li>Discord Hizmeti</li>
+                </ul>
+            </li>
+
+            <li>
+                <span class="category">🤑 LiveCivCiv:</span>
+                <ul class="subcategory">
+                    <li>Discord Sunucusu</li>
+                </ul>
+            </li>
+
+            <li>
+                <span class="category">🛠️ Diğer Araçlar:</span>
+                <ul class="subcategory">
+                    <li>İhbar 🟢</li>
+                    <li>Yemeksepeti 🟢</li>
+                    <li>SWS B0mb ⛔</li>
+                    <li>E-Okul ⛔</li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+    <h1>Duyurular</h1>
+
+    <table id="announcementTable">
+        <thead>
+            <tr>
+                <th>Başlık</th>
+                <th>Tarih</th>
+                <th>Açıklama</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Duyurular buraya eklenecek -->
+        </tbody>
+    </table>
+
+    <iframe id="discordWidget" src="https://discord.com/widget?id=1220824025668915242&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
+        <!-- Butonlar -->
+        <div class="buttons">
+            <a href="https://discord.com" class="button">Discord</a>
+            <a href="#" class="button">Destek</a>
+            <a href="#" class="button">EZALANYAv1</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
