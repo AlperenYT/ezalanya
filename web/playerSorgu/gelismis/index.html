@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oyuncu Sorgulama - EZALANYA</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Diğer stiller buraya eklenecek */
+
+        .drawer.open {
+            width: 250px;
+        }
+
+        .drawer.closed {
+            width: 0;
+        }
+
+        .drawer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+        }
+
+        .drawer.open ul {
+            display: block;
+        }
+
+        .toggle-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,7 +44,7 @@
     </video>
 
     <!-- Drawer Menü -->
-    <div class="drawer" id="drawer">
+    <div class="drawer closed" id="drawer">
         <button class="toggle-button" onclick="toggleDrawer()">☰</button>
         <h2>EZALANYA v2</h2>
         <ul>
@@ -103,10 +133,10 @@
     
     <script src="scripts.js"></script>
     <script>
-        // Drawer Menüsünü Açma/Kapama Fonksiyonu
         function toggleDrawer() {
-            var drawer = document.getElementById('drawer');
-            drawer.classList.toggle('open');
+            var drawer = document.getElementById("drawer");
+            drawer.classList.toggle("closed");
+            drawer.classList.toggle("open");
         }
     </script>
 </body>
