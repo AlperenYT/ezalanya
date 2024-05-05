@@ -1,0 +1,87 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@keyframes changeColor {
+    0% { color: rgb(255, 0, 0); } /* Kırmızı RGB renk */
+    25% { color: rgb(0, 255, 0); } /* Yeşil RGB renk */
+    50% { color: rgb(0, 0, 255); } /* Mavi RGB renk */
+    75% { color: rgb(255, 255, 0); } /* Sarı RGB renk */
+    100% { color: rgb(255, 0, 255); } /* Pembe RGB renk */
+}
+
+@keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(-5px, 5px); }
+    50% { transform: translate(5px, -5px); }
+    75% { transform: translate(-5px, 5px); }
+    100% { transform: translate(0); }
+}
+
+.shake-animation {
+    animation: shake 0.5s ease-in-out;
+}
+
+#ezalanya-title {
+    font-family: monospace;
+    font-size: 60px;
+    animation: changeColor 5s infinite alternate, shake 0.5 ease-in-out;
+    margin-bottom: 20px;
+}
+
+#subtext {
+    font-family: monospace;
+    font-size: 20px;
+    color: white;
+    animation: changeColor 5s infinite alternate;
+}
+
+#subtext2 {
+    font-family: monospace;
+    font-size: 12px;
+    color: white;
+}
+
+#copyright {
+    font-family: monospace;
+    font-size: 14px;
+    color:white;
+    padding-top: 50px;
+}
+
+.button {
+    font-family: monospace;
+    font-size: 16px;
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255); /* Beyaz RGB renk */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 40px;
+    cursor: pointer;
+    animation: changeColor 2s infinite alternate;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: rgb(255, 255, 255); /* Beyaz RGB renk */
+    color: black;
+    animation: changeColor 10s infinite alternate;
+}
