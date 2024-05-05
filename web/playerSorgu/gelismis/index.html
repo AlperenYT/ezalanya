@@ -12,10 +12,9 @@
         <source src="database/video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    
 
     <!-- Drawer Menü -->
-    <div class="drawer">
+    <div class="drawer" id="drawer">
         <h2>EZALANYA v2</h2>
         <ul>
             <li>
@@ -57,7 +56,6 @@
                     <li>E-Okul ⛔</li>
                 </ul>
             </li>
-
         </ul>
     </div>
 
@@ -103,6 +101,12 @@
     <p id="copyright">© 2024 - EZALANYA</p>
     
     <script src="scripts.js"></script>
-
+    <script>
+        // Drawer Menüsünü Açma/Kapama Fonksiyonu
+        function toggleDrawer() {
+            var drawer = document.getElementById('drawer');
+            drawer.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
