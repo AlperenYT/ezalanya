@@ -1,1 +1,29 @@
-var _0x2cd885=_0x402d;(function(_0x3d084b,_0x4d1176){var _0x47e290=_0x402d,_0x1de3af=_0x3d084b();while(!![]){try{var _0x1eaca7=parseInt(_0x47e290(0x1d8))/0x1+-parseInt(_0x47e290(0x1d3))/0x2+-parseInt(_0x47e290(0x1cf))/0x3+parseInt(_0x47e290(0x1da))/0x4+-parseInt(_0x47e290(0x1e2))/0x5+-parseInt(_0x47e290(0x1dc))/0x6+parseInt(_0x47e290(0x1d5))/0x7*(parseInt(_0x47e290(0x1d6))/0x8);if(_0x1eaca7===_0x4d1176)break;else _0x1de3af['push'](_0x1de3af['shift']());}catch(_0x4cda87){_0x1de3af['push'](_0x1de3af['shift']());}}}(_0x58d3,0x80f80));function _0x402d(_0x56df1b,_0x48030c){var _0x58d379=_0x58d3();return _0x402d=function(_0x402d24,_0x2cc064){_0x402d24=_0x402d24-0x1cc;var _0x3fb4ec=_0x58d379[_0x402d24];return _0x3fb4ec;},_0x402d(_0x56df1b,_0x48030c);}const users={'alperen':_0x2cd885(0x1df),'admin':_0x2cd885(0x1cc),'demo':_0x2cd885(0x1d9),'ali':_0x2cd885(0x1cd),'yasuosikici':_0x2cd885(0x1d4),'kero':_0x2cd885(0x1db)};function validateLogin(){var _0x2c9e49=_0x2cd885,_0x1434fc=document[_0x2c9e49(0x1d0)]('username')[_0x2c9e49(0x1e3)],_0x1d4f89=document['getElementById'](_0x2c9e49(0x1e0))[_0x2c9e49(0x1e3)];if(users[_0x2c9e49(0x1d7)](_0x1434fc)&&users[_0x1434fc]===_0x1d4f89)window[_0x2c9e49(0x1ce)][_0x2c9e49(0x1de)]=_0x2c9e49(0x1e1);else{var _0x1240de=document['getElementById']('error-message');_0x1240de[_0x2c9e49(0x1dd)]=_0x2c9e49(0x1d1),_0x1240de[_0x2c9e49(0x1d2)]['display']='block';}return![];}function _0x58d3(){var _0x2de3dd=['1283444VYCUDK','yasuo3162','14pDavGM','5327416nJXGZe','hasOwnProperty','650307gzQzkx','qwerty','1398124dBBzVo','kero3162','3189018UzuIEO','innerText','href','adminpro','password','../index.html','3038205pzorho','value','adminer','ali3162','location','67710eyQzEA','getElementById','Hatalı\x20kullanıcı\x20adı\x20veya\x20şifre.','style'];_0x58d3=function(){return _0x2de3dd;};return _0x58d3();}
+// Kullanıcı adı ve şifreleri saklayacağımız basit bir nesne
+const users = {
+    "alperen": "adminpro",
+    "admin": "adminer",
+    "demo": "qwerty",
+    "ali": "ali3162",
+    "yasuosikici": "yasuo3162",
+    "kero": "kero3162"
+};
+
+// Form gönderildiğinde yapılacak işlemler
+function validateLogin() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    // Kullanıcı adını kontrol et
+    if (users.hasOwnProperty(username) && users[username] === password) {
+        // Başarılı giriş durumu, istenilen sayfaya yönlendirme
+        window.location.href = "../index.html";
+    } else {
+        // Hatalı giriş durumu, hata mesajı gösterme
+        var errorMessage = document.getElementById("error-message");
+        errorMessage.innerText = "Hatalı kullanıcı adı veya şifre.";
+        errorMessage.style.display = "block";
+    }
+
+    // Formun normal işleyişini durdurma
+    return false;
+}
