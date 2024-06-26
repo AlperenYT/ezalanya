@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZALANYA v3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Önemli Bilgilendirme</h2>
+            <h3>v1 Desteği</h3>
+            <p>v1 sürümü artık güncellenmeyecek yani artık yeni kişiler eklenmeyecek ve v1'de yaşadığınız sorunlar için destek hizmeti verilmeyecek. Bununla birlikte v3 ile birlikte kaldırılan özellikler v1'de artık çalışmayacak.</p>
+            <h3>v2 Desteği</h3>
+            <p>v2 sürümü 1 Haziran 2024 tarihi ile birlikte artık destek ve güncelleme almayacaktır. Bunlara ek olarak v3 ile birlikte kaldırılan özellikler artık v2 üzerinde de kullanılamayacaktır.<br>v2'nin gelişmiş özelliklerini yükselterek v3'ü kurduk. Lütfen v3'ü kullanmaya devam edin.</p>
+            <h3>Live CivCiv Özellikleri</h3>
+            <p>Live CivCiv üzerinde yer alan hizmetlerimizi yakında buraya da ekliyoruz ve size daha kapsamlı bir hizmet vermek istiyoruz.</p>
+            <h2>Mobil Kullanıcının Dikkatine</h2>
+            <p>Eğer mobil kullanıcısysan siteyi "Masaüstünde Görüntüle" özelliğini açıp kullanman daha iyi olur.</p>
+
+            <div class="button-group">
+                <button onclick="showUpdate()">Güncelleme Notları</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup2" class="popup">
+        <div class="popup2-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Güncelleme Notları (16.05.2024)</h2>
+            <p>- v3 eklendi<br>- Arayüz güncellendi<br>- 5 yeni oyuncu eklendi<br>-Mesajlar eklendi</p>
+            <h3>Hatalar Giderildi</h3>
+            <p>- Sorgulamama hatası giderildi<br>- v2 yönlendirme hatası giderildi</p>
+            <h3>Destek</h3>
+            <p>Discord sunucumuzdan destek alabilirsin. Eğer yardımcı bir bilgi lazımsa <button onclick="showHelp()">Buradan</button> yardım alabilirsin.</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <img src="assets/logo.png" alt="EZALANYA Logo" class="logo">
+        <h1 id="sorguTitle">Gelişmiş Oyuncu Sorgulama</h1>
+        <p id="versionText">Aktif | GELİŞMİŞ SORGULAMA => Gücünü v3'ten Alıyor.</p>
+        <div class="input-group">
+            <label id="usernameID" for="username">Kullanıcı Adı:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+            <label id="userIDlabel" for="userID">Kullanıcı ID:</label>
+            <input type="text" id="userID" name="userID" required>
+        </div>
+        <div class="button-group">
+            <button onclick="queryPlayer()">Sorgula</button>
+            <button onclick="showHelp()">Yardım</button>
+            <button onclick="showHelp()">v1</button>
+            <button onclick="showHelp()">v2</button>
+            <button onclick="showHelp()">Live CivCiv</button>
+        </div>
+    </div>
+
+    <div id="errorMessage" class="error-message"></div>
+
+    <table id="playerTable">
+        <thead>
+            <tr>
+                <th>İsim</th>
+                <th>ID</th>
+                <th>Oluşturulma Tarihi</th>
+                <th>Annesi</th>
+                <th>Babası</th>
+                <th>Tel No.</th>
+                <th>Instagram</th>
+                <th>Adres</th>
+                <th>Kardeş Evliliği</th>
+                <th>Manita</th>
+            </tr>
+        </thead>
+        <tbody id="playerTableBody">
+            <!-- Oyuncu bilgileri buraya eklenecek -->
+        </tbody>
+    </table>
+
+    <p id="copyright">© 2024 - EZALANYA<br>EZALANYA asla sorumluluk kabul etmez. EZALANYA yalnızca bilgi sağlar, yapılanları yapanlar yapmıştır.</p>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

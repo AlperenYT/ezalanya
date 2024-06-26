@@ -1,0 +1,203 @@
+/* Genel stiller */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Source Code Pro', monospace;
+    background-color: black;
+    color: #00FF00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+#sorguTitle, #usernameID, #userIDlabel, #copyright {
+    color: #00FF00;
+}
+
+#copyright {
+    font-family: monospace;
+    font-size: 14px;
+    padding-top: 50px;
+}
+
+#versionText {
+    font-family: monospace;
+    font-size: 12px;
+    animation: changeColor 5s infinite alternate;
+}
+
+@keyframes changeColor {
+    0% { color: #00FF00; }
+    50% { color: #00AA00; }
+    100% { color: #00FF00; }
+}
+
+/* Giriş formu stilleri */
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #00FF00; /* Yeşil yazı rengi */
+    box-shadow: inset 0 0 5px #000;
+}
+
+/* Buton grup stilleri */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #00FF00;
+    background-color: #333;
+    border: 2px solid #00FF00;
+    border-radius: 6px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+    background-color: #00AA00;
+    border-color: #00AA00;
+    animation: changeColor 2s infinite alternate;
+}
+
+/* Logo stilleri */
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Tablo stilleri */
+#playerTable {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: transparent !important;
+    color: #00FF00;
+    margin-top: 20px;
+}
+
+#playerTable th, #playerTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: #00FF00;
+}
+
+#playerTable th {
+    background-color: #111;
+}
+
+/* Diğer stiller */
+.error-message {
+    color: #FF4444;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Pop-up stilleri */
+.popup {
+    display: none; /* Başlangıçta gizli tut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Arkaplanı karanlık yap */
+    z-index: 9999; /* Diğer elementlerden üstte olmasını sağla */
+}
+
+.popup-content {
+    background-color: #333;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Pop-up'ın genişliğini ayarla */
+    max-width: 500px; /* Maksimum genişlik */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ekranın tam ortasına hizala */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Pop-up 2 stilleri */
+.popup2 {
+    display: none; /* Başlangıçta gizli tut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Arkaplanı karanlık yap */
+    z-index: 9999; /* Diğer elementlerden üstte olmasını sağla */
+}
+
+.popup2-content {
+    background-color: #333;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Pop-up'ın genişliğini ayarla */
+    max-width: 500px; /* Maksimum genişlik */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ekranın tam ortasına hizala */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
