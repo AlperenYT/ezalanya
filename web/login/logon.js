@@ -16,7 +16,7 @@ function validateLogin() {
     // Kullanıcı adını kontrol et
     if (users.hasOwnProperty(username) && users[username] === password) {
         // Başarılı giriş durumu, istenilen sayfaya yönlendirme
-        window.location.href = "../v3/web/index.html";
+        window.location.href = "../../v3/web/index.html";
     } else {
         // Hatalı giriş durumu, hata mesajı gösterme
         var errorMessage = document.getElementById("error-message");
